@@ -60,8 +60,11 @@
     padding-left: 10px;
     padding-right: 10px;
     font-family: regular-font;
+
 }
 .link{
+    border-radius: 10px;
+
     color: rgb(27, 26, 26);
     text-decoration: none;
     padding: 10px;
@@ -77,9 +80,13 @@
     flex-direction: row;
 }
 .image{
-    height: 200px;
-    border-radius: 20px;
-    margin: 30px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    transition-timing-function: linear;
+    transition-duration: 0.1s;
 }
 .first-row{
     margin: 30px;
@@ -88,7 +95,11 @@
 }
 .row-inside{
     display: flex;
+    margin: 30px;
+    width: 40%;
+    justify-content: space-evenly;
     flex-direction: column;
+
 }
 .blue{
     color: blue;
@@ -103,7 +114,46 @@ h3{
 .red{
     color: red;
 }
-.row-inside p:last-child button{
-    padding: 10px;
+.row-inside p:last-child{
+
     width: auto;
+
 }
+.row-inside p:last-child button{
+    padding:10px
+}
+#sample{
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+.container{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-name: anime;
+    animation-duration: 2s;
+}
+@keyframes anime {
+    0%{
+        background-color: gray;
+    }
+    100%{
+        background-color: rgb(194, 194, 194);
+    }
+
+}
+.center{
+    position: absolute;
+    font-family: regular-font;
+    top: 50%;
+    left: 50%;
+}
+.link.selected {
+    background-color: blue;
+    color: white; /* Adjust text color for better visibility */
+  }
